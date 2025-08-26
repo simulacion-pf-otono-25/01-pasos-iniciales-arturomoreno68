@@ -1,0 +1,16 @@
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+print(factorial(5))  # Output: 120
+
+def combinacion(n, k):
+    if k > n or k < 0:
+        return 0
+    return factorial(n) // (factorial(k) * factorial(n - k))
+
+def binomial (n, k, p):
+    q = 1 - p
+    return combinacion(n, k) * (p ** k) * (q ** (n - k))
